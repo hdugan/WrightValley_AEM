@@ -64,7 +64,7 @@ plots[[1]] = plotFlightLine(lineNo = 2902, aemDF = df.vanda.profiles,
 # Line 2
 plots[[2]] = plotFlightLine(lineNo = 2901, aemDF = df.vanda.profiles) + 
   ylim(-425, 275) + labs(title = 'Line 3')
-# Line 3
+# Line 2
 plots[[3]] = plotFlightLine(lineNo = 21208, aemDF = df.djp.profiles, 
                             dvdpLocation = c(408190, 1387364, 75)) + 
   ylim(-425, 275) + labs(title = 'Line 2')
