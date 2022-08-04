@@ -61,7 +61,7 @@ plots[[1]] = plotFlightLine(lineNo = 2902, aemDF = df.vanda.profiles,
                             dvdpLocation = c(416673, 1391082, 87.73), dvdpLocation2 = c(413490.2, 1390340, 78)) + 
   ylim(-425, 275) +
   labs(title = 'Line 1') + theme(axis.title.x = element_blank())
-# Line 2
+# Line 3
 plots[[2]] = plotFlightLine(lineNo = 2901, aemDF = df.vanda.profiles) + 
   ylim(-425, 275) + labs(title = 'Line 3')
 # Line 2
@@ -83,6 +83,8 @@ output = p1 + plots[[1]] + plots[[3]] + plots[[2]] + guide_area() +
   plot_annotation(tag_levels = 'a', tag_suffix = ')') & 
   theme(plot.tag = element_text(size = 8))
 
+
 ggsave(plot = output, 'figures/Figure1.png', height = 8, width = 6.5, dpi = 500)
+ggsave(plot = output, 'figures/Figure1.pdf', height = 8, width = 6.5, dpi = 500, device=cairo_pdf)
 
 
